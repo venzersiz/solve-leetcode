@@ -22,16 +22,22 @@ class N412_Fizz_Buzz {
         public List<String> fizzBuzz(int n) {
             List<String> output = new ArrayList<>(n);
 
+            StringBuilder stringBuilder = new StringBuilder();
             for (int i = 1; i <= n; i++) {
-                if (i % 3 == 0 && i % 5 == 0) {
-                    output.add("FizzBuzz");
-                } else if (i % 3 == 0) {
-                    output.add("Fizz");
-                } else if (i % 5 == 0) {
-                    output.add("Buzz");
-                } else {
-                    output.add(i + "");
+                if (i % 3 == 0) {
+                    stringBuilder.append("Fizz");
                 }
+
+                if (i % 5 == 0) {
+                    stringBuilder.append("Buzz");
+                }
+
+                if (stringBuilder.length() == 0) {
+                    stringBuilder.append(i);
+                }
+
+                output.add(stringBuilder.toString());
+                stringBuilder.setLength(0);
             }
 
             return output;

@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -39,22 +41,14 @@ class N876_Middle_of_The_Linked_List {
 
         public ListNode middleNode(ListNode head) {
 
-            calculateSize(head);
+            List<ListNode> list = new ArrayList<>();
 
-            int middleIndex = size / 2;
-
-            ListNode current = head;
-            for (int i = 0; i < middleIndex; i++) {
-                current = current.next;
+            while (head != null) {
+                list.add(head);
+                head = head.next;
             }
-            return current;
-        }
 
-        private void calculateSize(ListNode node) {
-            if (node != null) {
-                size++;
-                calculateSize(node.next);
-            }
+            return list.get(list.size() / 2);
         }
     }
 

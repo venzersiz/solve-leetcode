@@ -1,6 +1,7 @@
 package leetcode;
 
-import org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.Test;
 
 class N2235_Add_Two_Integers {
@@ -9,8 +10,8 @@ class N2235_Add_Two_Integers {
 
     @Test
     void test() {
-        Assertions.assertThat(solution.sum(12, 5)).isEqualTo(17);
-        Assertions.assertThat(solution.sum(-10, 4)).isEqualTo(-6);
+        assertThat(solution.sum(12, 5)).isEqualTo(17);
+        assertThat(solution.sum(-10, 4)).isEqualTo(-6);
     }
 
     class Solution {

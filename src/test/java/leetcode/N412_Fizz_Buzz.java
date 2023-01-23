@@ -1,9 +1,10 @@
 package leetcode;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class N412_Fizz_Buzz {
@@ -12,9 +13,9 @@ class N412_Fizz_Buzz {
 
     @Test
     void test() {
-        Assertions.assertThat(solution.fizzBuzz(3)).isEqualTo(Arrays.asList("1", "2", "Fizz"));
-        Assertions.assertThat(solution.fizzBuzz(5)).isEqualTo(Arrays.asList("1", "2", "Fizz", "4", "Buzz"));
-        Assertions.assertThat(solution.fizzBuzz(15)).isEqualTo(Arrays.asList("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"));
+        assertThat(solution.fizzBuzz(3)).isEqualTo(Arrays.asList("1", "2", "Fizz"));
+        assertThat(solution.fizzBuzz(5)).isEqualTo(Arrays.asList("1", "2", "Fizz", "4", "Buzz"));
+        assertThat(solution.fizzBuzz(15)).isEqualTo(Arrays.asList("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"));
     }
 
     class Solution {

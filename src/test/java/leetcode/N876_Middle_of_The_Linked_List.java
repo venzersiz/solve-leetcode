@@ -1,8 +1,9 @@
 package leetcode;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class N876_Middle_of_The_Linked_List {
@@ -17,9 +18,9 @@ class N876_Middle_of_The_Linked_List {
         }
 
         ListNode middle = solution.middleNode(head);
-        Assertions.assertThat(middle.val).isEqualTo(3);
-        Assertions.assertThat(middle.next.val).isEqualTo(4);
-        Assertions.assertThat(middle.next.next.val).isEqualTo(5);
+        assertThat(middle.val).isEqualTo(3);
+        assertThat(middle.next.val).isEqualTo(4);
+        assertThat(middle.next.next.val).isEqualTo(5);
     }
 
     @Test
@@ -30,9 +31,9 @@ class N876_Middle_of_The_Linked_List {
         }
 
         ListNode middle = solution.middleNode(head);
-        Assertions.assertThat(middle.val).isEqualTo(4);
-        Assertions.assertThat(middle.next.val).isEqualTo(5);
-        Assertions.assertThat(middle.next.next.val).isEqualTo(6);
+        assertThat(middle.val).isEqualTo(4);
+        assertThat(middle.next.val).isEqualTo(5);
+        assertThat(middle.next.next.val).isEqualTo(6);
     }
 
     class Solution {

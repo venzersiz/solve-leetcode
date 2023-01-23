@@ -1,6 +1,7 @@
 package leetcode;
 
-import org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.Test;
 
 class N1480_Running_Sum_of_1d_Array {
@@ -9,16 +10,16 @@ class N1480_Running_Sum_of_1d_Array {
 
     @Test
     void runningSum() {
-        Assertions.assertThat(solution.runningSum(new int[]{1, 2, 3, 4})).isEqualTo(new int[]{1, 3, 6, 10});
-        Assertions.assertThat(solution.runningSum(new int[]{1, 1, 1, 1, 1})).isEqualTo(new int[]{1, 2, 3, 4, 5});
-        Assertions.assertThat(solution.runningSum(new int[]{3, 1, 2, 10, 1})).isEqualTo(new int[]{3, 4, 6, 16, 17});
+        assertThat(solution.runningSum(new int[]{1, 2, 3, 4})).isEqualTo(new int[]{1, 3, 6, 10});
+        assertThat(solution.runningSum(new int[]{1, 1, 1, 1, 1})).isEqualTo(new int[]{1, 2, 3, 4, 5});
+        assertThat(solution.runningSum(new int[]{3, 1, 2, 10, 1})).isEqualTo(new int[]{3, 4, 6, 16, 17});
     }
 
     @Test
     void runningSumInPlace() {
-        Assertions.assertThat(solution.runningSumInPlace(new int[]{1, 2, 3, 4})).isEqualTo(new int[]{1, 3, 6, 10});
-        Assertions.assertThat(solution.runningSumInPlace(new int[]{1, 1, 1, 1, 1})).isEqualTo(new int[]{1, 2, 3, 4, 5});
-        Assertions.assertThat(solution.runningSumInPlace(new int[]{3, 1, 2, 10, 1})).isEqualTo(new int[]{3, 4, 6, 16, 17});
+        assertThat(solution.runningSumInPlace(new int[]{1, 2, 3, 4})).isEqualTo(new int[]{1, 3, 6, 10});
+        assertThat(solution.runningSumInPlace(new int[]{1, 1, 1, 1, 1})).isEqualTo(new int[]{1, 2, 3, 4, 5});
+        assertThat(solution.runningSumInPlace(new int[]{3, 1, 2, 10, 1})).isEqualTo(new int[]{3, 4, 6, 16, 17});
     }
 
     class Solution {

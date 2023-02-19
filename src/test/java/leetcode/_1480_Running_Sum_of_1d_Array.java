@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-class N1480_Running_Sum_of_1d_Array {
+class _1480_Running_Sum_of_1d_Array {
 
     Solution solution = new Solution();
 
@@ -24,6 +24,10 @@ class N1480_Running_Sum_of_1d_Array {
 
     class Solution {
 
+        /**
+         * 시간 복잡도: O(N)
+         * 공간 복잡도: O(1)
+         */
         public int[] runningSum(int[] nums) {
 
             int[] output = new int[nums.length];
@@ -37,6 +41,10 @@ class N1480_Running_Sum_of_1d_Array {
             return output;
         }
 
+        /**
+         * 시간 복잡도: O(N)
+         * 공간 복잡도: O(1) // TODO: 왜 그런지 이해가 아직 잘 모르겠음
+         */
         public int[] runningSumInPlace(int[] nums) {
 
             for (int i = 1; i < nums.length; i++) {

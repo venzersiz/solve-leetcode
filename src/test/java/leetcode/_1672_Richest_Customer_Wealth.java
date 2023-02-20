@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-class N1672_Richest_Customer_Wealth {
+class _1672_Richest_Customer_Wealth {
 
     Solution solution = new Solution();
 
@@ -17,6 +17,10 @@ class N1672_Richest_Customer_Wealth {
 
     class Solution {
 
+        /**
+         * 시간 복잡도: O(N x M)
+         * 공간 복잡도: O(1)
+         */
         public int maximumWealth(int[][] accounts) {
             int maximumWealth = 0;
 
